@@ -2,12 +2,11 @@ public class DatabaseController {
     private static DatabaseController DatabaseControllerInstance = null;
 
     private DatabaseController(){
-        this.DatabaseControllerInstance = this;
     };
 
     static DatabaseController getInstance(){
         if (DatabaseControllerInstance == null){
-            return new DatabaseController();
+            DatabaseControllerInstance = new DatabaseController();
         }
         return DatabaseControllerInstance;
     }
